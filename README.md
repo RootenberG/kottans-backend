@@ -1,10 +1,11 @@
 ## Git Basics
-## Unix Shell
-## Git Collaboration
-## Python Basics 1
+## [Unix Shell](https://github.com/RootenberG/kottans-backend/tree/master/task_unix_shell)
+## [Git Collaboration](https://github.com/RootenberG/kottans-backend/tree/master/task_git_collaboration)
+## [Python Basics 1](https://github.com/RootenberG/kottans-backend/tree/master/python_basics_1)
+## [TCP. UDP. Network](https://github.com/RootenberG/kottans-backend/tree/master/task_networks)
 ### Profile link:
 [a link](https://www.hackerrank.com/savichevdenis244?hr_r=1)
-## Memory Management
+## Memory Management:
 Questions:
 1) What's going to happen if program reaches maximum limit of stack ?
 - When the maximum stack size has been reached, we have a stack overflow and the program receives a Segmentation Fault.
@@ -43,11 +44,25 @@ Heap - 56094c801000-56094c822000,
 Stack - 7ffd7b334000-7ffd7b355000,
 ```
 #### The first article was difficult for me, but I figured out the basics of the anatomy of programs in memory. I find this material useful to everyone.
-**Screenshots:**
-<img src="task_unix_shell/image_2019-09-13_00-17-12.png" width=600 align=right>
-<img src="task_unix_shell/image_2019-09-13_00-19-45.png" width=600 align=right>
-<img src="task_unix_shell/image_2019-09-13_00-19-45.png" width=600 align=right>
-<img src="task_unix_shell/image_2019-09-13_23-27-46.png" width=600 align=right>
-<img src="task_git_collaboration/image_2019-09-19_23-54-41.png" width=600 align=right>
-<img src="task_git_collaboration/image_2019-09-19_23-47-38.png" width=600 align=right>
-<img src="python_basics_1/photo_2019-10-18_00-34-41.jpg" width=600 align=right>
+
+## HTTP & HTTPS
+```
+    curl https://api.github.com/users/RootenberG
+    curl -i https://api.github.com/users/RootenberG
+    curl --user "RootenberG:blabla" https://api.github.com/gists/starred
+    curl --user "RootenberG:*******" https://api.github.com/gists/starred
+    curl --user "RootenberG" https://api.github.com/gists/starred
+    curl -i https://api.github.com/orgs/kottans/repos
+    curl --user "RootenberG" -X POST -d '{"title":"New issue","body":"Tutorial issue test","labels":["test_bug"]}' https://api.github.com/repos/RootenberG/kottans-backend/issues
+ ```
+1) Name at least three possible negative consequences of not using https.
+- No permanent connection, no keys, no authentication.
+2) Explain the main idea behind public key cryptography in few sentences
+- There are two type of key authentication, synchronous and asynchronous, in the case of syn there is only one type of key. and in asyn there are two keys one private an another public, basically public key is for ensure that only the receiver can open this message with the public key.
+3) You are creating an application for pet clinic. You need to implement the following functionality:
+- POST Status code:204 body add new pet (including name, age, breed, owner's name, medical history)
+- GET Status code:200 search pet by name
+- PUT Status code:204 change name of an existing pet
+- PUT Status code:204 add new info about pet's health
+- POST Status code:200 assign a pet to a particular doctor in the clinic
+- POST Status code:205 register an appointment for a pet. This request should include info about pet, doctor and appointment date and time.
